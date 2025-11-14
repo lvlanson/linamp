@@ -49,6 +49,7 @@ impl MusicLibrary {
             // establishing MediaSourceStream to probe if format is supported
             let media_stream = MediaSourceStream::new(Box::new(file), Default::default());
 
+            // extracting extension
             let extension = entry.path().extension();
             let mut hint: Hint = Hint::new();
 
